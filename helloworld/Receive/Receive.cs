@@ -29,6 +29,8 @@ consumer.Received += (model, ea) =>
     var message = Encoding.UTF8.GetString(body);
     Console.WriteLine($" [x] Received {message}");
 
+    // Ack message. Useful when autoAck: false
+    // channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
 };
 
 channel.BasicConsume(queue: queueName,
