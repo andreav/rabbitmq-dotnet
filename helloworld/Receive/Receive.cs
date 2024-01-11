@@ -17,6 +17,8 @@ channel.QueueDeclare(queue: queueName,
                      autoDelete: false,
                      arguments: null);
 
+// piloto alcuni parametri della queu
+// channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
 
 Console.WriteLine(" [*] Waiting for messages.");
 
